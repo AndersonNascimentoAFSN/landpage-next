@@ -1,0 +1,15 @@
+.header {
+  height: 100px;
+  background: var( --gray-800);
+  display: flex;
+  align-items: center;
+
+  div {
+    display: flex;
+    align-items: center;
+  }
+
+  h1 {
+    color: var(--white);
+  }
+}

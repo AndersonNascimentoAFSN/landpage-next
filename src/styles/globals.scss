@@ -8,6 +8,8 @@
 
   --green-500: #00875f;
   --green-300: #00b37e;
+
+  --red: #E35151;
 }
 
 * {
@@ -20,8 +22,8 @@ html,
 body {
   font-family: Roboto, sans-serif;
   --webkit-font-smoothing: antialiased;
-  background-color: var(--gray-900);
-  color: var(--gray-100);
+  background-color: var(--white);
+  color: var(--gray-900);
 }
 
 body, input, textarea {
