@@ -1,9 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import { MdFavorite } from "react-icons/md";
-import { MdFavoriteBorder } from "react-icons/md";
 
 import styles from "../../styles/ProductCard.module.scss";
+import { FavoriteButton } from "../FavoriteButton";
 
 interface ProductCardProps {
   id: string;
@@ -12,6 +11,7 @@ interface ProductCardProps {
   listPrice: string;
   salePrice: string;
   isFavorite: boolean;
+  onClick: (id: string) => void;
 }
 
 export function ProductCard({
@@ -21,14 +21,14 @@ export function ProductCard({
   listPrice,
   salePrice,
   isFavorite,
+  onClick,
 }: ProductCardProps) {
   return (
     <div className={styles.container}>
-      {isFavorite ? (
-        <MdFavorite className={styles.icon} />
-      ) : (
-        <MdFavoriteBorder className={styles.icon} />
-      )}
+      <div className={styles.wrapperButton}>
+        <FavoriteButton id={id} isFavorite={isFavorite} onClick={onClick} />
+      </div>
+
       <div className={styles.wrapperImg}>
         <Image
           loader={() => imageURL}

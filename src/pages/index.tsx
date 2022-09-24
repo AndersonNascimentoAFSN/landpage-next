@@ -1,13 +1,13 @@
+import { useEffect, useState } from "react";
 import type { NextPage } from "next";
-import Head from "next/head";
 import { ProductCard } from "../components/ProductCard";
 
 import styles from "../styles/Home.module.scss";
 
-const products = [
+const data = [
   {
     id: "1",
-    name: "Qualquer coisa",
+    name: "Camisa preta manga curta",
     imageURL:
       "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
     listPrice: "R$ 100,00",
@@ -16,7 +16,7 @@ const products = [
   },
   {
     id: "2",
-    name: "Qualquer coisa",
+    name: "Camisa preta manga curta",
     imageURL:
       "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
     listPrice: "R$ 100,00",
@@ -24,8 +24,8 @@ const products = [
     isFavorite: false,
   },
   {
-    id: "2",
-    name: "Qualquer coisa",
+    id: "3",
+    name: "Camisa preta manga curta",
     imageURL:
       "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
     listPrice: "R$ 100,00",
@@ -33,8 +33,8 @@ const products = [
     isFavorite: false,
   },
   {
-    id: "2",
-    name: "Qualquer coisa",
+    id: "4",
+    name: "Camisa preta manga curta",
     imageURL:
       "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
     listPrice: "R$ 100,00",
@@ -42,8 +42,8 @@ const products = [
     isFavorite: false,
   },
   {
-    id: "2",
-    name: "Qualquer coisa",
+    id: "5",
+    name: "Camisa preta manga curta",
     imageURL:
       "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
     listPrice: "R$ 100,00",
@@ -52,7 +52,33 @@ const products = [
   },
 ];
 
+interface Product {
+  id: string;
+  name: string;
+  imageURL: string;
+  listPrice: string;
+  salePrice: string;
+  isFavorite: boolean;
+}
+
 const Home: NextPage = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+
+  function handleIsFavorite(id: string) {
+    setProducts((products) =>
+      products.map((product) => {
+        if (product.id === id) {
+          return { ...product, isFavorite: !product.isFavorite };
+        }
+        return product;
+      })
+    );
+  }
+
+  useEffect(() => {
+    setProducts(data);
+  }, []);
+
   return (
     <div className={styles.container}>
       <main className={styles.main}>
@@ -69,6 +95,7 @@ const Home: NextPage = () => {
                 isFavorite={isFavorite}
                 listPrice={listPrice}
                 salePrice={salePrice}
+                onClick={handleIsFavorite}
               />
             )
           )}

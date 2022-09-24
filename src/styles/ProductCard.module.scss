@@ -3,9 +3,20 @@
   height: 402px;
   border: 1px solid #EEEEEE;
 
-
-  .icon {
-    color: var(--red);
-    font-size: 20px;
+  .wrapperButton {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
   }
+  
+  button {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    .icon {
+      color: var(--red);
+      font-size: 20px;
+    }
+  }
+  
 }
