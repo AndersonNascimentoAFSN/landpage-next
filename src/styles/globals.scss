@@ -1,16 +1,4 @@
-:root {
-  --white: #FFFF;
-
-  --gray-900: #121214;
-  --gray-800: #202024;
-  --gray-300: #c4c4cc;
-  --gray-100: #e1e1e6;
-
-  --green-500: #00875f;
-  --green-300: #00b37e;
-
-  --red: #E35151;
-}
+@import './scss//variables.scss';
 
 * {
   box-sizing: border-box;
@@ -20,10 +8,10 @@
 
 html,
 body {
-  font-family: Roboto, sans-serif;
+  font-family: $font-primary;
   --webkit-font-smoothing: antialiased;
-  background-color: var(--white);
-  color: var(--gray-900);
+  background-color: $white;
+  color: $gray-900;
 }
 
 body, input, textarea {

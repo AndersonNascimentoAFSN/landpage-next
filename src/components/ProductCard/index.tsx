@@ -1,8 +1,10 @@
 import React from "react";
 import Image from "next/image";
 
-import styles from "../../styles/ProductCard.module.scss";
 import { FavoriteButton } from "../FavoriteButton";
+import { Amount } from "../Amount";
+
+import styles from "@styles/ProductCard.module.scss";
 
 interface ProductCardProps {
   id: string;
@@ -40,11 +42,9 @@ export function ProductCard({
 
         <p>{name}</p>
 
-        <div>
-          <span>Atacado</span>
-          <strong>{listPrice}</strong>
-          <span>Varejo</span>
-          <strong>{salePrice}</strong>
+        <div className={styles.wrapperAmount}>
+          <Amount title="Atacado: " value={listPrice}/>
+          <Amount title="Varejo: " value={salePrice}/>
         </div>
       </div>
     </div>

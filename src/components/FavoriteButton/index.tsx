@@ -1,7 +1,7 @@
 import { MdFavorite } from "react-icons/md";
 import { MdFavoriteBorder } from "react-icons/md";
 
-import styles from "../../styles/FavoriteButton.module.scss";
+import styles from "@styles/FavoriteButton.module.scss";
 
 interface FavoriteButtonProps {
   id: string;

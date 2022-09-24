@@ -1,22 +1,21 @@
+@import './scss/variables.scss';
+
 .container {
   width: 235px;
   height: 402px;
   border: 1px solid #EEEEEE;
+  padding: 20px;
+  border-radius: 8px;
 
   .wrapperButton {
     display: flex;
     justify-content: flex-end;
     width: 100%;
   }
-  
-  button {
-    padding: 0;
-    background-color: transparent;
-    border: none;
-    .icon {
-      color: var(--red);
-      font-size: 20px;
-    }
+
+  .wrapperAmount {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
   }
-  
 }

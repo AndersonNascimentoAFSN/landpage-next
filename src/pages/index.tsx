@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import type { NextPage } from "next";
 import { ProductCard } from "../components/ProductCard";
 
-import styles from "../styles/Home.module.scss";
+import styles from "@styles/Home.module.scss";
 
 const data = [
   {
