@@ -1,56 +1,9 @@
 import { useEffect, useState } from "react";
-import type { NextPage } from "next";
+import type { GetStaticProps } from "next";
+
 import { ProductCard } from "../components/ProductCard";
 
 import styles from "@styles/Home.module.scss";
-
-const data = [
-  {
-    id: "1",
-    name: "Camisa preta manga curta",
-    imageURL:
-      "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
-    listPrice: "R$ 100,00",
-    salePrice: "R$ 100,00",
-    isFavorite: true,
-  },
-  {
-    id: "2",
-    name: "Camisa preta manga curta",
-    imageURL:
-      "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
-    listPrice: "R$ 100,00",
-    salePrice: "R$ 100,00",
-    isFavorite: false,
-  },
-  {
-    id: "3",
-    name: "Camisa preta manga curta",
-    imageURL:
-      "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
-    listPrice: "R$ 100,00",
-    salePrice: "R$ 100,00",
-    isFavorite: false,
-  },
-  {
-    id: "4",
-    name: "Camisa preta manga curta",
-    imageURL:
-      "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
-    listPrice: "R$ 100,00",
-    salePrice: "R$ 100,00",
-    isFavorite: false,
-  },
-  {
-    id: "5",
-    name: "Camisa preta manga curta",
-    imageURL:
-      "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
-    listPrice: "R$ 100,00",
-    salePrice: "R$ 100,00",
-    isFavorite: false,
-  },
-];
 
 interface Product {
   id: string;
@@ -61,7 +14,11 @@ interface Product {
   isFavorite: boolean;
 }
 
-const Home: NextPage = () => {
+interface HomeProps {
+  productList: Product[];
+}
+
+const Home = ({ productList }: HomeProps) => {
   const [products, setProducts] = useState<Product[]>([]);
 
   function handleIsFavorite(id: string) {
@@ -76,8 +33,8 @@ const Home: NextPage = () => {
   }
 
   useEffect(() => {
-    setProducts(data);
-  }, []);
+    setProducts(productList);
+  }, [productList]);
 
   return (
     <div className={styles.container}>
@@ -103,6 +60,65 @@ const Home: NextPage = () => {
       </main>
     </div>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const seconds = 30
+
+  const data = [
+    {
+      id: "1",
+      name: "Camisa preta manga curta",
+      imageURL:
+        "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
+      listPrice: "R$ 100,00",
+      salePrice: "R$ 100,00",
+      isFavorite: true,
+    },
+    {
+      id: "2",
+      name: "Camisa preta manga curta",
+      imageURL:
+        "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
+      listPrice: "R$ 100,00",
+      salePrice: "R$ 100,00",
+      isFavorite: false,
+    },
+    {
+      id: "3",
+      name: "Camisa preta manga curta",
+      imageURL:
+        "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
+      listPrice: "R$ 100,00",
+      salePrice: "R$ 100,00",
+      isFavorite: false,
+    },
+    {
+      id: "4",
+      name: "Camisa preta manga curta",
+      imageURL:
+        "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
+      listPrice: "R$ 100,00",
+      salePrice: "R$ 100,00",
+      isFavorite: false,
+    },
+    {
+      id: "5",
+      name: "Camisa preta manga curta",
+      imageURL:
+        "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
+      listPrice: "R$ 100,00",
+      salePrice: "R$ 100,00",
+      isFavorite: false,
+    },
+  ];
+  
+  return {
+    props: {
+      productList: data,
+    },
+    revalidate: seconds,
+  };
 };
 
 export default Home;
