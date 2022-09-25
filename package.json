@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "test": "jest --watch",
     "server": "json-server --watch db.json --port 3001"
   },
   "dependencies": {
@@ -18,11 +19,15 @@
     "sass": "^1.55.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
     "@types/node": "18.7.20",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
     "eslint": "8.24.0",
     "eslint-config-next": "12.3.1",
+    "jest": "^29.0.3",
+    "jest-environment-jsdom": "^29.0.3",
     "json-server": "^0.17.0",
     "typescript": "4.8.3"
   }
