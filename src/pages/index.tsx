@@ -1,25 +1,25 @@
-import { useEffect, useState } from "react";
 import type { GetStaticProps } from "next";
 
 import { ProductCard } from "../components/ProductCard";
 import { getProducts } from "src/lib/products";
 import { formatCurrency } from "src/utils/formatCurrency";
+import { useProducts } from "src/hooks/useProducts";
 
-import { Product } from '../types/product'
+import { Product } from "../types/product";
 
 import styles from "@styles/Home.module.scss";
 
-interface ProductData extends Omit<Product, "listPrice" | "salePrice">  {
+interface ProductData extends Omit<Product, "listPrice" | "salePrice"> {
   listPrice: number;
   salePrice: number;
-};
+}
 
 interface HomeProps {
   productList: Product[];
 }
 
 const Home = ({ productList }: HomeProps) => {
-  const [products, setProducts] = useState<Product[]>([]);
+  const { products, setProducts } = useProducts({ productList });
 
   function handleIsFavorite(id: string) {
     setProducts((products) =>
@@ -31,10 +31,6 @@ const Home = ({ productList }: HomeProps) => {
       })
     );
   }
-
-  useEffect(() => {
-    setProducts(productList);
-  }, [productList]);
 
   return (
     <div className={styles.container}>
@@ -67,7 +63,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const data = await getProducts();
 
-  return { 
+  return {
     props: {
       productList: data?.data.map((product: ProductData) => ({
         id: product.id,
