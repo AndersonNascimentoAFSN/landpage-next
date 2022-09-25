@@ -2,21 +2,14 @@ import { useEffect, useState } from "react";
 import type { GetStaticProps } from "next";
 
 import { ProductCard } from "../components/ProductCard";
-
-import styles from "@styles/Home.module.scss";
 import { getProducts } from "src/lib/products";
 import { formatCurrency } from "src/utils/formatCurrency";
 
-interface Product {
-  id: string;
-  name: string;
-  imageURL: string;
-  listPrice: string;
-  salePrice: string;
-  isFavorite: boolean;
-}
+import { Product } from '../types/product'
 
-type ProductData = Omit<Product, "listPrice" | "salePrice"> & {
+import styles from "@styles/Home.module.scss";
+
+interface ProductData extends Omit<Product, "listPrice" | "salePrice">  {
   listPrice: number;
   salePrice: number;
 };

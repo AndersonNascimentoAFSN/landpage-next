@@ -4,15 +4,11 @@ import Image from "next/image";
 import { FavoriteButton } from "../FavoriteButton";
 import { Amount } from "../Amount";
 
+import { Product } from '../../types/product'
+
 import styles from "@styles/ProductCard.module.scss";
 
-interface ProductCardProps {
-  id: string;
-  name: string;
-  imageURL: string;
-  listPrice: string;
-  salePrice: string;
-  isFavorite: boolean;
+interface ProductCardProps extends Product {
   onClick: (id: string) => void;
 }
 
