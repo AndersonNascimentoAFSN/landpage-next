@@ -1,17 +1,15 @@
 @import './scss/variables.scss';
 
 .header {
-  height: 100px;
+  height: 6.25rem;
   background: $gray-800;
   display: flex;
   align-items: center;
+}
 
-  div {
-    display: flex;
-    align-items: center;
-  }
-
-  h1 {
-    color: $white;
-  }
+.headerWrapper  {
+  max-width: 1220px;
+  flex: 1;
+  padding: 0 1rem;
+  margin: 0 auto;
 }

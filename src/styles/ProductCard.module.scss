@@ -2,10 +2,10 @@
 
 .container {
   width: 235px;
-  height: 402px;
-  border: 1px solid #EEEEEE;
-  padding: 20px;
+  border: 1px solid $gray-50;
+  padding: 1rem;
   border-radius: 8px;
+  background-color: $white;
 
   .wrapperButton {
     display: flex;
@@ -16,6 +16,6 @@
   .wrapperAmount {
     width: 100%;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 0.65rem;
   }
 }

@@ -2,42 +2,42 @@
   "products": [
     {
       "id": "1",
-      "name": "Camisa preta manga curta",
+      "name": "Camiseta Gospel Frases Bíblicas Masculina",
       "imageURL": "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
-      "listPrice": 100,
-      "salePrice": 100,
-      "isFavorite": true
+      "listPrice": 60,
+      "salePrice": 49,
+      "isFavorite": false
     },
     {
       "id": "2",
-      "name": "Camisa preta manga curta",
-      "imageURL": "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
-      "listPrice": 100,
-      "salePrice": 100,
+      "name": "Camiseta Jesus Cristo Strong Masculina",
+      "imageURL": "https://images.tcdn.com.br/img/img_prod/737444/camiseta_jesus_cristo_strong_masculina_dizeres_religiosos_30089771_1_20200427181321.jpg",
+      "listPrice": 60,
+      "salePrice": 49,
       "isFavorite": false
     },
     {
       "id": "3",
-      "name": "Camisa preta manga curta",
-      "imageURL": "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
-      "listPrice": 100,
-      "salePrice": 100,
+      "name": "Camiseta Gratidão Religiosa Feminina",
+      "imageURL": "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gratidao_religiosa_feminina_frases_evangelicas_36866635_variacao_57599_1_20200427181333.jpg",
+      "listPrice": 60,
+      "salePrice": 49,
       "isFavorite": false
     },
     {
       "id": "4",
-      "name": "Camisa preta manga curta",
-      "imageURL": "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
-      "listPrice": 100,
-      "salePrice": 100,
+      "name": "Camiseta Evangélica Loves Masculina",
+      "imageURL": "https://images.tcdn.com.br/img/img_prod/737444/camiseta_loves_religiosa_masculina_frases_da_biblia_33399563_1_20200427181330.jpg",
+      "listPrice": 60,
+      "salePrice": 49,
       "isFavorite": false
     },
     {
       "id": "5",
-      "name": "Camisa preta manga curta",
-      "imageURL": "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
-      "listPrice": 100,
-      "salePrice": 100,
+      "name": "Camiseta Religiosa Perdão Forgiven Masculina",
+      "imageURL": "https://images.tcdn.com.br/img/img_prod/737444/camiseta_religiosa_para_igreja_perdao_forgiven_masculina_30186297_1_20200427181328.jpg",
+      "listPrice": 60,
+      "salePrice": 49,
       "isFavorite": false
     }
   ]

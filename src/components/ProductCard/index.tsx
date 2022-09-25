@@ -40,8 +40,8 @@ export function ProductCard({
         <p>{name}</p>
 
         <div className={styles.wrapperAmount}>
-          <Amount title="Atacado: " value={listPrice}/>
-          <Amount title="Varejo: " value={salePrice}/>
+          <Amount title="Atacado: " value={salePrice}/>
+          <Amount title="Varejo: " value={listPrice}/>
         </div>
       </div>
     </div>

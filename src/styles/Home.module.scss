@@ -1,26 +1,46 @@
 @import './scss/variables.scss';
 
 .container {
-  padding: 0 2rem;
-}
+  padding: 0 1rem;
 
-.main {
-  // min-height: 100vh;
-  // padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-  text-align: center;
-}
+    .title {
+      margin: 1em 0;
+      line-height: 1.15;
+      font-size: 1.5rem;
+      text-align: center;
+      font-weight: $font-bold;
+    
+      &::before,  &::after {
+        content: "";
+        display: inline-block;
+        height: 0.35rem;
+        width: 80px;
+        background-color: $golden;
+        position: relative;
+        vertical-align: middle;
+      }
 
-.productsCards {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
+      &::before {
+        top: 18px;
+        left: 97px;
+      }
+
+      &::after {
+        bottom: 18px;
+        right: 97px;
+      }
+    }
+
+    .productsCards {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+  }
 }
