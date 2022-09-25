@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 
-import { FavoriteButton } from "../FavoriteButton";
-import { Amount } from "../Amount";
+import { FavoriteButton } from "@components/FavoriteButton";
+import { Amount } from "@components/Amount";
 
 import { Product } from '../../types/product'
 
