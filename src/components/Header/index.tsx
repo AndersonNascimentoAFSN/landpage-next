@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { MdShoppingBag } from "react-icons/md";
 
-import Styles from "@styles/Header.module.scss";
+import Styles from "@/styles/Header.module.scss";
 
 export function Header() {
   return (

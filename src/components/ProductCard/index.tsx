@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
 
-import { FavoriteButton } from "@components/FavoriteButton";
-import { Amount } from "@components/Amount";
+import { FavoriteButton } from "@/components/FavoriteButton";
+import { Amount } from "@/components/Amount";
 
-import { Product } from '../../types/product'
+import { Product } from '@/types/product'
 
-import styles from "@styles/ProductCard.module.scss";
+import styles from "@/styles/ProductCard.module.scss";
 
 interface ProductCardProps extends Product {
   onClick: (id: string) => void;

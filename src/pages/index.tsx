@@ -1,11 +1,11 @@
 import type { GetStaticProps } from "next";
 
-import { ProductCard } from "@components/ProductCard";
-import { getProducts } from "@lib/products";
-import { formatCurrency } from "@utils/formatCurrency";
-import { useProducts } from "@hooks/useProducts";
+import { ProductCard } from "@/components/ProductCard";
+import { getProducts } from "@/lib/products";
+import { formatCurrency } from "@/utils/formatCurrency";
+import { useProducts } from "@/hooks/useProducts";
 
-import { Product } from "../types/product";
+import { Product } from "@/types/product";
 
 import styles from "@styles/Home.module.scss";
 
