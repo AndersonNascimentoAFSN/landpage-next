@@ -34,6 +34,7 @@ export function ProductCard({
       <div className={styles.wrapperImg}>
         <Image
           loader={() => imageURL}
+          unoptimized={true} 
           src={imageURL}
           alt="Image product"
           width={212}

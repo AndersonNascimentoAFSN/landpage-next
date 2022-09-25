@@ -74,7 +74,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const data = await getProducts();
 
-  return {
+  return { 
     props: {
       productList: data?.data.map((product: ProductData) => ({
         id: product.id,
