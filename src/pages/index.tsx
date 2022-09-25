@@ -7,7 +7,7 @@ import { useProducts } from "@/hooks/useProducts";
 
 import { Product } from "@/types/product";
 
-import styles from "@styles/Home.module.scss";
+import styles from "@/styles/Home.module.scss";
 
 interface ProductData extends Omit<Product, "listPrice" | "salePrice"> {
   listPrice: number;
