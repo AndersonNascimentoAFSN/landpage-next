@@ -5,6 +5,7 @@ import { ProductCard } from "../components/ProductCard";
 
 import styles from "@styles/Home.module.scss";
 import { getProducts } from "src/lib/products";
+import { formatCurrency } from "src/utils/formatCurrency";
 
 interface Product {
   id: string;
@@ -14,6 +15,11 @@ interface Product {
   salePrice: string;
   isFavorite: boolean;
 }
+
+type ProductData = Omit<Product, "listPrice" | "salePrice"> & {
+  listPrice: number;
+  salePrice: number;
+};
 
 interface HomeProps {
   productList: Product[];
@@ -70,7 +76,14 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      productList: data?.data,
+      productList: data?.data.map((product: ProductData) => ({
+        id: product.id,
+        name: product.name,
+        imageURL: product.imageURL,
+        listPrice: formatCurrency(product.listPrice),
+        salePrice: formatCurrency(product.salePrice),
+        isFavorite: product.isFavorite,
+      })),
     },
     revalidate: seconds,
   };
