@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Camisa preta manga curta",
+      "imageURL": "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
+      "listPrice": "R$ 100,00",
+      "salePrice": "R$ 100,00",
+      "isFavorite": true
+    },
+    {
+      "id": "2",
+      "name": "Camisa preta manga curta",
+      "imageURL": "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
+      "listPrice": "R$ 100,00",
+      "salePrice": "R$ 100,00",
+      "isFavorite": false
+    },
+    {
+      "id": "3",
+      "name": "Camisa preta manga curta",
+      "imageURL": "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
+      "listPrice": "R$ 100,00",
+      "salePrice": "R$ 100,00",
+      "isFavorite": false
+    },
+    {
+      "id": "4",
+      "name": "Camisa preta manga curta",
+      "imageURL": "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
+      "listPrice": "R$ 100,00",
+      "salePrice": "R$ 100,00",
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "name": "Camisa preta manga curta",
+      "imageURL": "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
+      "listPrice": "R$ 100,00",
+      "salePrice": "R$ 100,00",
+      "isFavorite": false
+    }
+  ]
+}

@@ -4,6 +4,7 @@ import type { GetStaticProps } from "next";
 import { ProductCard } from "../components/ProductCard";
 
 import styles from "@styles/Home.module.scss";
+import { getProducts } from "src/lib/products";
 
 interface Product {
   id: string;
@@ -63,59 +64,13 @@ const Home = ({ productList }: HomeProps) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const seconds = 30
+  const seconds = 30;
 
-  const data = [
-    {
-      id: "1",
-      name: "Camisa preta manga curta",
-      imageURL:
-        "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
-      listPrice: "R$ 100,00",
-      salePrice: "R$ 100,00",
-      isFavorite: true,
-    },
-    {
-      id: "2",
-      name: "Camisa preta manga curta",
-      imageURL:
-        "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
-      listPrice: "R$ 100,00",
-      salePrice: "R$ 100,00",
-      isFavorite: false,
-    },
-    {
-      id: "3",
-      name: "Camisa preta manga curta",
-      imageURL:
-        "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
-      listPrice: "R$ 100,00",
-      salePrice: "R$ 100,00",
-      isFavorite: false,
-    },
-    {
-      id: "4",
-      name: "Camisa preta manga curta",
-      imageURL:
-        "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
-      listPrice: "R$ 100,00",
-      salePrice: "R$ 100,00",
-      isFavorite: false,
-    },
-    {
-      id: "5",
-      name: "Camisa preta manga curta",
-      imageURL:
-        "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
-      listPrice: "R$ 100,00",
-      salePrice: "R$ 100,00",
-      isFavorite: false,
-    },
-  ];
-  
+  const data = await getProducts();
+
   return {
     props: {
-      productList: data,
+      productList: data?.data,
     },
     revalidate: seconds,
   };
