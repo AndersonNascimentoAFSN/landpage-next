@@ -6,17 +6,19 @@ interface UseProductsProps {
   productList: Product[];
 }
 
+export function setProductAsFavorite(product: Product, id: string): Product {
+  if (product.id === id) {
+    return { ...product, isFavorite: !product.isFavorite };
+  }
+  return product;
+}
+
 export function useProducts({ productList }: UseProductsProps) {
   const [products, setProducts] = useState<Product[]>([]);
 
   function handleIsFavorite(id: string): void {
     setProducts((products) =>
-      products.map((product) => {
-        if (product.id === id) {
-          return { ...product, isFavorite: !product.isFavorite };
-        }
-        return product;
-      })
+      products.map((product) => setProductAsFavorite(product, id))
     );
   }
 
