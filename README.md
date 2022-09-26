@@ -30,6 +30,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [SASS](https://sass-lang.com/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- [Jest](https://jestjs.io/pt-BR/docs/getting-started)
 - [NEXT.js](https://nextjs.org/)
 
 ## 💻 Projeto
