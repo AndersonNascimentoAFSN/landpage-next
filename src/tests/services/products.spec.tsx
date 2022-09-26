@@ -1,7 +1,7 @@
 import { api } from "@/services/api";
 import MockAdapter from "axios-mock-adapter";
 
-import { getProducts } from "@/lib/products";
+import { getProducts } from "@/services/products";
 
 const axiosMock = new MockAdapter(api);
 
@@ -24,7 +24,7 @@ describe("products lib", () => {
     axiosMock.onGet().reply(200, products);
 
     const result = await getProducts();
-    expect(Array.isArray(result.data)).toBe(true);
-    expect(result.data).toEqual(products);
+    expect(Array.isArray(result)).toBe(true);
+    expect(result).toEqual(products);
   });
 });

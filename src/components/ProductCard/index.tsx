@@ -6,7 +6,7 @@ import { Amount } from "@/components/Amount";
 
 import { Product } from '@/types/product'
 
-import styles from "@/styles/ProductCard.module.scss";
+import styles from "./ProductCard.module.scss";
 
 interface ProductCardProps extends Product {
   onClick: (id: string) => void;

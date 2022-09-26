@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 
-import Styles from "@/styles/Header.module.scss";
+import Styles from "./Header.module.scss";
 
 export function Header() {
   return (

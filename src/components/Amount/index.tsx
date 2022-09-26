@@ -1,4 +1,4 @@
-import styles from '@/styles/Amount.module.scss'
+import styles from './Amount.module.scss'
 
 interface AmountProps {
   title: string;

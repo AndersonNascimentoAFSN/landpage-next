@@ -6,3 +6,8 @@ export interface Product {
   salePrice: string;
   isFavorite: boolean;
 }
+
+export interface ProductData extends Omit<Product, "listPrice" | "salePrice"> {
+  listPrice: number;
+  salePrice: number;
+}
