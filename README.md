@@ -1,8 +1,6 @@
-<div width="100%" background="#000">
-  <h1 align="center">
-    <img alt="sal-da-terra" title="sal-da-terra" src=".github/logo.svg" width="100px" />
-  </h1>
-</div
+<h1 align="center">
+  <img alt="sal-da-terra" title="sal-da-terra" src=".github/logo.svg" width="100px" />
+</h1>
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
