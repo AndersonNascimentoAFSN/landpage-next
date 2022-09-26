@@ -46,6 +46,9 @@ Para iniciar o seu servidor NEXT.js:
 - Inicie a API fake `yarn server`
 - Inicie o servidor NEXT.js com `yarn dev`
 
+Para executar os testes:
+- `yarn test`
+
 Agora você pode acessar [`localhost:3000`](http://localhost:3000) do seu navegador.
 
 <!-- ## 🔖 Layout
