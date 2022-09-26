@@ -1,4 +1,5 @@
 import { render } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 
 import Home from "../../pages";
 
@@ -26,9 +27,9 @@ const products = [
 describe("Home page", () => {
   it("should display title 'Destaques'", () => {
     const { getByRole } = render(<Home productList={products} />);
-    const title = getByRole('heading', {
-      name: /destaques/i
-    })
+    const title = getByRole("heading", {
+      name: /destaques/i,
+    });
 
     expect(title).toBeInTheDocument();
   });
@@ -36,10 +37,22 @@ describe("Home page", () => {
   it("should display card product", () => {
     const { getByText, getAllByRole } = render(<Home productList={products} />);
 
-    const nameProduct = getByText(/camiseta gospel frases bíblicas masculina/i)
+    const nameProduct = getByText(/camiseta gospel frases bíblicas masculina/i);
     expect(nameProduct).toBeInTheDocument();
 
-    const favoriteButtons = getAllByRole('button')
+    const favoriteButtons = getAllByRole("button");
     expect(favoriteButtons.length).toBe(2);
+  });
+
+  it("should mark the product as a favorite", async () => {
+    const { getByRole } = render(<Home productList={products.slice(0, 1)} />);
+
+    const favoriteButton = getByRole("button");
+
+    expect(favoriteButton).not.toHaveAttribute("data-testId", "marked-favorite");
+
+    await userEvent.click(favoriteButton);
+
+    expect(favoriteButton).toHaveAttribute("data-testId", "marked-favorite");
   });
 });
