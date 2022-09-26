@@ -49,6 +49,7 @@ Para iniciar o seu servidor NEXT.js:
 
 Para executar os testes:
 - `yarn test`
+- `yarn test:coverage`
 
 Agora você pode acessar [`localhost:3000`](http://localhost:3000) do seu navegador.
 
