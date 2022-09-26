@@ -36,6 +36,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 Esse projeto é uma landpage, responsiva, perfeita para exibir produtos que inspiram.
 
+Visualize o projeto: https://landpage-next.herokuapp.com/
+
 ## 🚀 Como executar
 
 Para iniciar o seu servidor NEXT.js:
