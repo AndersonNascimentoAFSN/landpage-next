@@ -24,6 +24,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [SASS](https://sass-lang.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 - [NEXT.js](https://nextjs.org/)
 
 ## 💻 Projeto
