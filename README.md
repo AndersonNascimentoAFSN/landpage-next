@@ -15,7 +15,7 @@
 <br>
 
 <p align="center">
-  <img alt="DoctorCare" src=".github/preview.jpg" width="100%">
+  <img alt="Preview Projeto" src=".github/preview.jpg" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -28,7 +28,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-DoctorCare é uma página institucional no formato One Page, responsiva, para usar em diversos tipos de micros, pequenas e médias empresas. Contém as seguintes seções: Header, Navigation, Home, Sobre, Serviços e Footer
+Esse projeto é uma landpage, responsiva, perfeita para exibir qualquer produto.
 
 ## 🚀 Como executar
 
