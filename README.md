@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="sal-da-terra" title="sal-da-terra" src=".github/logo.svg" width="50px"/>
+  <img alt="sal-da-terra" title="sal-da-terra" src=".github/logo.svg" width="200px" background="#000"/>
 </h1>
 
 <p align="center">
