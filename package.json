@@ -4,15 +4,19 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "json-server --watch db.json --port 3001 && next start",
+    "builder": "next build",
+    "build": "npm-run-all --parallel server builder",
+    "up:prod": "next start",
+    "start": "npm-run-all --parallel up:prod server",
     "lint": "next lint",
     "test": "jest --watch",
-    "server": "json-server --watch db.json --port 3001"
+    "server": "json-server --watch db.json --port 3001",
+    "up:dev": "npm-run-all --parallel dev server"
   },
   "dependencies": {
     "axios": "^0.27.2",
     "next": "12.3.1",
+    "npm-run-all": "^4.1.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
