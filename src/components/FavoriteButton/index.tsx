@@ -15,7 +15,12 @@ export function FavoriteButton({
   onClick,
 }: FavoriteButtonProps) {
   return (
-    <button onClick={() => onClick(id)} className={styles.button} type="button">
+    <button
+      onClick={() => onClick(id)}
+      className={styles.button}
+      type="button"
+      data-testid={isFavorite ? "marked-favorite" : ""}
+    >
       {isFavorite ? (
         <MdFavorite className={styles.icon} />
       ) : (
