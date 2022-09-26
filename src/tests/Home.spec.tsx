@@ -34,9 +34,12 @@ describe("Home page", () => {
   });
 
   it("should display card product", () => {
-    const { getByText } = render(<Home productList={products} />);
+    const { getByText, getAllByRole } = render(<Home productList={products} />);
 
     const nameProduct = getByText(/camiseta gospel frases bíblicas masculina/i)
     expect(nameProduct).toBeInTheDocument();
+
+    const favoriteButtons = getAllByRole('button')
+    expect(favoriteButtons.length).toBe(2);
   });
 });
