@@ -1,3 +1,7 @@
+<h1 align="center">
+  <img alt="sal-da-terra" title="sal-da-terra" src=".github/logo.svg" />
+</h1>
+
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -30,7 +34,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Esse projeto é uma landpage, responsiva, perfeita para exibir qualquer produto.
+Esse projeto é uma landpage, responsiva, perfeita para exibir produtos que inspiram.
 
 ## 🚀 Como executar
 
