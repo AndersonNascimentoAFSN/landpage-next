@@ -1,7 +1,9 @@
 import { render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { api } from "@/services/api";
+import MockAdapter from "axios-mock-adapter";
 
-import Home from "../../pages";
+import Home, { getStaticProps } from "../../pages";
 
 const products = [
   {
@@ -23,6 +25,29 @@ const products = [
     isFavorite: false,
   },
 ];
+
+const productsData = [
+  {
+    id: "1",
+    name: "Camiseta Gospel Frases Bíblicas Masculina",
+    imageURL:
+      "https://images.tcdn.com.br/img/img_prod/737444/camiseta_gospel_religiosa_catolica_frases_biblia_masculina_24835885_1_20200427181259.jpg",
+    listPrice: 60,
+    salePrice: 49,
+    isFavorite: false,
+  },
+  {
+    id: "2",
+    name: "Camiseta Jesus Cristo Strong Masculina",
+    imageURL:
+      "https://images.tcdn.com.br/img/img_prod/737444/camiseta_jesus_cristo_strong_masculina_dizeres_religiosos_30089771_1_20200427181321.jpg",
+    listPrice: 60,
+    salePrice: 49,
+    isFavorite: false,
+  },
+];
+
+const axiosMock = new MockAdapter(api);
 
 describe("Home page", () => {
   it("should display title 'Destaques'", () => {
@@ -49,10 +74,28 @@ describe("Home page", () => {
 
     const favoriteButton = getByRole("button");
 
-    expect(favoriteButton).not.toHaveAttribute("data-testId", "marked-favorite");
+    expect(favoriteButton).not.toHaveAttribute(
+      "data-testId",
+      "marked-favorite"
+    );
 
     await userEvent.click(favoriteButton);
 
     expect(favoriteButton).toHaveAttribute("data-testId", "marked-favorite");
+  });
+
+  it("should loads initial data", async () => {
+    axiosMock.onGet().reply(200, productsData);
+
+    const response = await getStaticProps({});
+
+    expect(response).toEqual(
+      expect.objectContaining({
+        props: {
+          productList: products,
+        },
+        "revalidate": 30
+      })
+    );
   });
 });
